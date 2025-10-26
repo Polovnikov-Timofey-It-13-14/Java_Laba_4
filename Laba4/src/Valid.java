@@ -48,8 +48,14 @@ public class Valid {
 
         int startIndex = 0;
         if (str.charAt(0) == '-') {
-            if (str.length() == 1) return false;
+            if (str.length() == 1){
+                return false;
+            }
             startIndex = 1;
+        }
+
+        if (str.charAt(startIndex) == '0' && str.length() > startIndex + 1) {
+            return false;
         }
 
         for (int i = startIndex; i < str.length(); i++) {
