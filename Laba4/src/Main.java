@@ -30,7 +30,7 @@ public class Main {
                     System.out.print("Введите целое число: ");
                     String input = scanner.nextLine();
 
-                    if (valid.isNumber(input)) {
+                    if (valid.isInteger(input)) {
                         int number1 = Integer.parseInt(input);
 
                         integerBox.put(number1);
@@ -45,7 +45,7 @@ public class Main {
                         System.out.println("Коробка пуста: " + integerBox.isEmpty());
 
                     } else {
-                        System.out.println("Ошибка: введите целое число!");
+                        System.out.println("Ошибка");
                     }
                     break;
 
@@ -57,7 +57,7 @@ public class Main {
                     System.out.print("Введите второе число: ");
                     String num2 = scanner.nextLine();
 
-                    if (valid.isNumber(num1) && valid.isNumber(num2)) {
+                    if (valid.isInteger(num1) && valid.isInteger(num2)) {
                         int n1 = Integer.parseInt(num1);
                         int n2 = Integer.parseInt(num2);
 
@@ -162,7 +162,7 @@ public class Main {
                                 if (valid.isInteger(numStr)) {
                                     numList.add(Integer.parseInt(numStr));
                                 } else {
-                                    System.out.println("Ошибка: введите целое число!");
+                                    System.out.println("Ошибка");
                                     i--;
                                 }
                             }
@@ -196,7 +196,7 @@ public class Main {
                                         if (valid.isInteger(numStr)) {
                                             array[j] = Integer.parseInt(numStr);
                                         } else {
-                                            System.out.println("Ошибка: введите целое число!");
+                                            System.out.println("Ошибка");
                                             j--;
                                         }
                                     }
@@ -272,7 +272,7 @@ public class Main {
                                 if (valid.isAnyNumber(numStr)) {
                                     numList.add(Integer.parseInt(numStr));
                                 } else {
-                                    System.out.println("Ошибка: введите целое число!");
+                                    System.out.println("Ошибка");
                                     i--;
                                 }
                             }
@@ -307,7 +307,7 @@ public class Main {
                                         if (valid.isAnyNumber(numStr)) {
                                             array[j] = Integer.parseInt(numStr);
                                         } else {
-                                            System.out.println("Ошибка: введите целое число!");
+                                            System.out.println("Ошибка");
                                             j--;
                                         }
                                     }
@@ -385,7 +385,7 @@ public class Main {
                                 if (valid.isAnyNumber(numStr)) {
                                     numList.add(Integer.parseInt(numStr));
                                 } else {
-                                    System.out.println("Ошибка: введите целое число!");
+                                    System.out.println("Ошибка");
                                     i--;
                                 }
                             }
@@ -419,7 +419,7 @@ public class Main {
                                         if (valid.isAnyNumber(numStr)) {
                                             numbers.add(Integer.parseInt(numStr));
                                         } else {
-                                            System.out.println("Ошибка: введите целое число!");
+                                            System.out.println("Ошибка");
                                             j--;
                                         }
                                     }
@@ -462,7 +462,7 @@ public class Main {
                                 if (valid.isAnyNumber(numStr)) {
                                     numList.add(Integer.parseInt(numStr));
                                 } else {
-                                    System.out.println("Ошибка: введите целое число!");
+                                    System.out.println("Ошибка");
                                     i--;
                                 }
                             }
