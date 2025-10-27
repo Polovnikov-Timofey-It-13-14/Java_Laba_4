@@ -1,4 +1,5 @@
 public class FindMax {
+    //Метод для поиска максимума
     public static double findMax(Box<? extends Number>[] boxes) {
         if (boxes == null || boxes.length == 0) {
             throw new IllegalArgumentException("Массив коробок не может быть пустым");
