@@ -6,28 +6,27 @@ public class FindMax {
         }
 
         double max = Double.NEGATIVE_INFINITY;
+        boolean found = false;
 
-        for (int i = 0; i < boxes.length; i++) {
-            Box<? extends Number> box = boxes[i];
+        for (Box<? extends Number> box : boxes) {
             if (box == null || box.isEmpty()) {
-                throw new IllegalArgumentException("Коробка " + i + " пустая");
+                continue;
             }
 
-            Number number = box.get();
-            double value = number.doubleValue();
-
-            putBack(box, number);
-
-            if (value > max) {
-                max = value;
+            Number number = box.take();
+            if (number != null) {
+                double value = number.doubleValue();
+                if (value > max) {
+                    max = value;
+                    found = true;
+                }
             }
         }
 
-        return max;
-    }
+        if (!found) {
+            throw new IllegalArgumentException("Ни одна коробка не содержит чисел");
+        }
 
-    @SuppressWarnings("unchecked")
-    private static <T extends Number> void putBack(Box<T> box, Number number) {
-        box.put((T) number);
+        return max;
     }
 }
