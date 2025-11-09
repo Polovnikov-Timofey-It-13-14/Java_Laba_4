@@ -1,7 +1,6 @@
 public class Box <T> {
     private T item;
-    
-    //Конструкторы
+
     public Box() {
         this.item = null;
     }
@@ -10,22 +9,23 @@ public class Box <T> {
         this.item = something;
     }
 
-    //Метод для складывания предметов в коробку
     public void put(T item) {
         if (this.item != null) {
-            throw new IllegalStateException("Коробка уже заполнена. Нельзя разместить новый объект.");
+            throw new IllegalStateException("Коробка заполнена.");
         }
         this.item = item;
     }
 
-    //Метод для получения предмета из коробки
     public T get() {
         T item = this.item;
         this.item = null;
         return item;
     }
 
-    //Проверка на пустоту
+    public T take() {
+        return this.item;
+    }
+
     public boolean isEmpty () {
         return this.item == null;
     }
