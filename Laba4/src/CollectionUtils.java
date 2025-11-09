@@ -1,7 +1,6 @@
 import java.util.*;
 
 public class CollectionUtils {
-    //Метод для создания коллекций
     public static <T, P> P collect(
             List<T> list,
             Collector<P, T> collector,
